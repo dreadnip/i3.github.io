@@ -2,13 +2,22 @@
 // © 2011 Michael Stapelberg
 
 function initDownloads() {
-    var old = $('.oldversion');
-    old.hide();
-    $('table#downloads').after('<a id="showOldDownloads" href="#">display ' +
-                     old.length + ' old versions…</a>');
-    $('#showOldDownloads').click(function() {
-        $('.oldversion').show('fast');
-        $(this).hide();
-        return false;
+    const oldVersions = document.querySelector('.old');
+    const oldTrigger = document.querySelector('#showOldDownloads');
+    const oldAmount = document.querySelector('#numberOfOldDownloads');
+
+    // Display the number of old versions
+    oldAmount.innerHTML = oldVersions.children.length;
+
+    oldTrigger.addEventListener('click', (event) => {
+
+        // Stop the link from redirecting
+        event.preventDefault();
+
+        // Show the second tbody, the one with the old verions
+        oldVersions.style.display = 'table-row-group';
+
+        // Hide the expand link
+        oldTrigger.style.display = 'none';
     });
 }
