@@ -19,24 +19,12 @@ body {
     margin: 0 auto;
     overflow-y: auto;
     background-color: #2e2e2e;
-    color: #CCC;
+    color: #f2f2f2;
+    line-height: 1.5;
 }
 
-/*
- * Typo
- */
-
-h2, h3 {
-    font-family: 'Mako', sans-serif;
-    font-weight: bold;
-    letter-spacing: -1px;
-    color: #FFF;
-    line-height: 1.2em;
-    border-bottom: 2px solid #333;
-}
-
-h2 {
-    font-size: 1.8em;
+img {
+    max-width: 100%
 }
 
 a {
@@ -48,19 +36,25 @@ a:hover {
 }
 
 /*
+ * Typo
+ */
+
+h1, h2, h3 {
+
+}
+
+/*
  * Header
  */
 
 header {
     display: flex;
+    align-items: center;
+    margin: .5rem 0 2rem 0;
 }
 
-.title {
+.logo {
     flex: 1;
-    background-image: url(../img/logo.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    text-indent: -9999px;
 }
 
 /*
@@ -81,7 +75,7 @@ nav li + li {
 
 nav ul li a {
     color: #FFF;
-    padding: .4rem 1.4rem;
+    padding: .4rem .8rem;
     text-decoration: none;
 }
 
@@ -89,85 +83,138 @@ nav ul li a:hover {
     border-bottom: 2px solid #fff;
 }
 
-img {
-    max-width: 100%
-}
-
-#info {
-    padding: 1rem;
-    border-radius: 4px;
-    margin-top: 1em;
-    color: #666;
-    background-color: #dddddd;
-}
-
-#download {
-    background-color: #000;
-    color: #ffffff;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-}
-
-#download a {
-    color: white;
-    text-decoration: none;
-    padding-left: 1em;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    padding-right: 1em;
-}
-
-#info h2 {
-    margin: 17px 0 15px 0;
-    border: 0;
-    font-family: 'Georgia', 'Ovo', serif;
-    color: #2b7dbc;
-    font-size: 1.75em;
-    font-weight: normal;
-}
-
-#info p {
-  line-height: 1.5;
-}
-
-#content {
-    text-align: justify;
-    width: 874px;
-    padding-left: 1em;
-    padding-right: 1em;
-    line-height: 1.5;
-    color: #fff;
-    font-size: 1.2em;
-}
-
-#content p {
-    padding-right: 2em;
-}
-#content li {
-    margin-bottom: 1em;
-    padding-right: 2em;
-}
-
-#distributions {
-    margin-left: 2em;
-    line-height: 100px;
-}
-
-#distributions img {
-    vertical-align: middle;
-    margin-left: 1.5em;
-    margin-right: 1.5em;
-    margin-bottom: 1.5em;
-    margin-top: .5em;
-}
+/*
+ * Footer
+ */
 
 footer {
-    border-top: 2px solid #333;
-    margin-top: 4em;
-    padding: 1em;
-    font-size: .9em;
+    border-top: 2px solid #7b7b7b;
+    margin-top: 2em;
+    padding: 2em;
+    font-size: .9rem;
     text-align: center;
+    color: #ccc;
 }
+
+/*
+ * Info box on homepage
+ */
+
+.info {
+    padding: 1.5rem;
+    border-radius: 4px;
+    color: #666;
+    background-color: #dddddd;
+    display: flex;
+}
+
+.info div + a {
+    margin-left: 1rem
+}
+
+.info h2 {
+    font-size: 2rem;
+    color: #2b7dbc;
+}
+
+.info-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.download {
+    background-color: #C44B34;
+    color: #ffffff;
+    padding: .5rem;
+    text-decoration: none;
+}
+
+.screens {
+    width: 80%;
+    display: inline-block;
+}
+
+.screens img {
+    vertical-align: middle;
+}
+
+/*
+ * Content
+ */
+
+.content {
+    margin: 1rem 0;
+}
+
+.content * + * {
+    margin-top: 1rem;
+}
+
+.content ul {
+    margin-left: 2rem;
+}
+
+.content li {
+    margin-bottom: 1em;
+}
+
+.content h2 {
+    border-bottom: solid 2px #f2f2f2;
+}
+
+/*
+ * Distributions page
+ */
+
+.distributions {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.distributions img {
+    vertical-align: middle;
+    max-width: 5rem;
+    margin: 1rem;
+}
+
+.old {
+    display: none;
+}
+
+@media screen and (max-width: 25rem) {
+
+    body {
+        padding: 1rem;
+    }
+    header {
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+    .logo {
+        margin-bottom: 1rem;
+    }
+
+    .info {
+        flex-direction: column;
+    }
+
+    .info div + a {
+        margin: 1rem 0 0 0;
+    }
+
+    .screens {
+        width: 100%;
+    }
+
+    footer {
+        margin-top: 1rem;
+        padding: 1rem;
+    }
+}
+
+/* Havent touched anything under this, TO DO */
 
 .docs {
     float: left;
@@ -176,27 +223,6 @@ footer {
 
 .docs p, .ugdocs p {
     padding-left: 0.5em;
-}
-
-@font-face {
-    font-family: 'Droid Sans';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Droid Sans'), local('DroidSans'), url('/fonts/DroidSans.woff') format('woff'), url('/fonts/DroidSans.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'Ovo';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Ovo'), url('/fonts/Ovo.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'Mako';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Mako'), url('/fonts/Mako.ttf') format('truetype');
 }
 
 .video img {
