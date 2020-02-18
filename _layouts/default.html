@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <meta charset="utf-8">
         <title>i3 - improved tiling wm</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/x-icon" href="/favicon.ico">
         <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen">
         <link rel="publisher" href="https://plus.google.com/113555191861605339299">
@@ -59,22 +60,25 @@ else window.onload = loadjs;
 {% endif %}
     </head>
     <body>
-        <div id="main">
-            <a href="/"><h1 id="title">i3 - improved tiling WM</h1></a>
-			<ul id="nav">
-{% include menulink.html name="Docs" url="/docs/" %}
-{% include menulink.html name="Screens" url="/screenshots/" %}
-{% include menulink.html name="FAQ" url="https://www.reddit.com/r/i3wm/" %}
-{% include menulink.html name="Contact" url="/contact/" %}
-{% include menulink.html name="Bugs" url="https://github.com/i3/i3/issues" %}
-			</ul>
-	<br style="clear: both">
-	    {{ content }}
-        </div>
-    <div id="footer" lang="de">
-        © 2009-present Michael Stapelberg,
-        <a href="/impress.html">Impressum</a>,
-        <a href="https://github.com/i3/i3.github.io">Source</a>
-    </div>
+        <header>
+            <a class="title" href="/"><h1>i3 - improved tiling WM</h1></a>
+            <nav>
+                <ul>
+                    {% include menulink.html name="Docs" url="/docs/" %}
+                    {% include menulink.html name="Screens" url="/screenshots/" %}
+                    {% include menulink.html name="FAQ" url="https://www.reddit.com/r/i3wm/" %}
+                    {% include menulink.html name="Contact" url="/contact/" %}
+                    {% include menulink.html name="Bugs" url="https://github.com/i3/i3/issues" %}
+                </ul>
+            </nav>
+        </header>
+        <main>
+	        {{ content }}
+        </main>
+        <footer>
+            © 2009-present Michael Stapelberg,
+            <a href="/impress.html">Impressum</a>,
+            <a href="https://github.com/i3/i3.github.io">Source</a>
+        </footer>
     </body>
 </html>
