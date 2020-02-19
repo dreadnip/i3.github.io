@@ -28,7 +28,7 @@ img {
 }
 
 a {
-    color: #2b7dbc;
+    color: #52C0FF;
 }
 
 a:hover {
@@ -50,7 +50,7 @@ h1, h2, h3 {
 header {
     display: flex;
     align-items: center;
-    margin: .5rem 0 2rem 0;
+    margin-top: .5rem;
 }
 
 .logo {
@@ -70,7 +70,7 @@ nav ul li {
 }
 
 nav li + li {
-    border-left: 2px solid #3A8ECD;
+    border-left: 2px solid #52C0FF;
 }
 
 nav ul li a {
@@ -84,12 +84,19 @@ nav ul li a:hover {
 }
 
 /*
+ * Main
+ */
+
+main {
+    margin: 2rem 0;
+}
+
+/*
  * Footer
  */
 
 footer {
     border-top: 2px solid #7b7b7b;
-    margin-top: 2em;
     padding: 2em;
     font-size: .9rem;
     text-align: center;
@@ -114,7 +121,7 @@ footer {
 
 .info h2 {
     font-size: 2rem;
-    color: #2b7dbc;
+    color: #52C0FF;
 }
 
 .info-text {
@@ -143,24 +150,20 @@ footer {
  * Content
  */
 
-.content {
+#content {
     margin: 1rem 0;
 }
 
-.content * + * {
+#content * + * {
     margin-top: 1rem;
 }
 
-.content ul {
+#content ul {
     margin-left: 2rem;
 }
 
-.content li {
+#content li {
     margin-bottom: 1em;
-}
-
-.content h2 {
-    border-bottom: solid 2px #f2f2f2;
 }
 
 /*
@@ -187,13 +190,18 @@ footer {
     body {
         padding: 1rem;
     }
+
     header {
         flex-direction: column;
         justify-content: center;
-        margin-bottom: 1rem;
     }
+
     .logo {
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    main {
+        margin: 1.5rem 0;
     }
 
     .info {
@@ -209,7 +217,6 @@ footer {
     }
 
     footer {
-        margin-top: 1rem;
         padding: 1rem;
     }
 }
