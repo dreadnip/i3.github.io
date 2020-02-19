@@ -109,10 +109,10 @@ footer {
 
 .info {
     padding: 1.5rem;
-    border-radius: 4px;
-    color: #666;
-    background-color: #dddddd;
+    border-radius: 5px;
+    background-color: #242424;
     display: flex;
+    margin-bottom: 2rem;
 }
 
 .info div + a {
@@ -150,11 +150,7 @@ footer {
  * Content
  */
 
-#content {
-    margin: 1rem 0;
-}
-
-#content * + * {
+#content > * + * {
     margin-top: 1rem;
 }
 
@@ -185,6 +181,58 @@ footer {
     display: none;
 }
 
+/*
+ * Docs page
+ */
+
+.columns {
+    display: flex;
+}
+
+#content .columns div.docs {
+    margin-top: 0;
+}
+
+.item {
+    padding: .5rem;
+}
+
+* + .item {
+    margin-top: 1rem;
+}
+
+.item > a {
+    font-weight: bold
+}
+
+.highlight {
+    background-color: #444;
+    border-radius: 5px;
+    width: 90%;
+}
+
+.author {
+    color: #7c7c7c;
+    margin-left: .5rem;
+}
+
+.docversion {
+    margin: 0.25em;
+    margin-top: 0.9em;
+    padding: 0.1em;
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+    background-color: #333;
+    border: 2px solid #555;
+    border-radius: 4px;
+    float: right;
+}
+
+.docversion a, .docversion a:visited {
+    color: white;
+    text-decoration: none;
+}
+
 @media screen and (max-width: 25rem) {
 
     body {
@@ -206,6 +254,7 @@ footer {
 
     .info {
         flex-direction: column;
+        margin-bottom: 1rem;
     }
 
     .info div + a {
@@ -222,15 +271,6 @@ footer {
 }
 
 /* Havent touched anything under this, TO DO */
-
-.docs {
-    float: left;
-    width: 48%;
-}
-
-.docs p, .ugdocs p {
-    padding-left: 0.5em;
-}
 
 .video img {
     margin-left: 1em;
@@ -356,27 +396,6 @@ footer {
     padding-left: 1em;
 }
 
-.docs strong {
-    margin-right: 1em;
-}
-
-.docversion {
-    margin: 0.25em;
-    margin-top: 0.9em;
-    padding: 0.1em;
-    padding-left: 0.25em;
-    padding-right: 0.25em;
-    background-color: #333;
-    border: 2px solid #555;
-    border-radius: 4px;
-    float: right;
-}
-
-.docversion a, .docversion a:visited {
-    color: white;
-    text-decoration: none;
-}
-
 table#downloads tr {
     opacity: 0.7;
 }
@@ -404,30 +423,4 @@ table#downloads tbody tr:first-child {
 .usergen tt {
     font-family: 'Droid Sans Mono', sans-serif;
     font-size: inherit;
-}
-
-.ugdocs .author {
-    opacity: 0.3;
-}
-
-/* clearfix */
-.clearfix:after {
-    content: ".";
-    display: block;
-    clear: both;
-    visibility: hidden;
-    line-height: 0;
-    height: 0;
-}
-
-.clearfix {
-    display: inline-block;
-}
-
-html[xmlns] .clearfix {
-    display: block;
-}
-
-* html .clearfix {
-    height: 1%;
 }
