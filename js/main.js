@@ -1,6 +1,3 @@
-// vim:ts=4:sw=4:expandtab
-// © 2011 Michael Stapelberg
-
 /*
  * The Photoswipe gallery for the screenshot page
  */
