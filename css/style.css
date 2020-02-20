@@ -6,6 +6,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    outline: solid 1px green;
 }
 
 /*
@@ -50,11 +51,12 @@ h1, h2, h3 {
 header {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     margin-top: .5rem;
 }
 
 .logo {
-    flex: 1;
+    max-width: 25rem;
 }
 
 /*
@@ -69,18 +71,18 @@ nav ul li {
     list-style: none;
 }
 
-nav li + li {
-    border-left: 2px solid #52C0FF;
-}
-
 nav ul li a {
     color: #FFF;
     padding: .4rem .8rem;
     text-decoration: none;
+    border-left: 2px solid #52C0FF;
+    border-bottom: 2px solid #2e2e2e;
+    transition: ease 150ms;
 }
 
 nav ul li a:hover {
-    border-bottom: 2px solid #fff;
+    border-left: 2px solid #20A672;
+    border-bottom: 2px solid #20A672;
 }
 
 /*
@@ -96,11 +98,11 @@ main {
  */
 
 footer {
-    border-top: 2px solid #7b7b7b;
-    padding: 2em;
+    border-top: 2px solid #242424;
+    color: #ccc;
     font-size: .9rem;
     text-align: center;
-    color: #ccc;
+    padding: 2em;
 }
 
 /*
@@ -108,8 +110,7 @@ footer {
  */
 
 .info {
-    padding: 1.5rem;
-    border-radius: 5px;
+    padding: 2rem;
     background-color: #242424;
     display: flex;
     margin-bottom: 2rem;
@@ -121,7 +122,7 @@ footer {
 
 .info h2 {
     font-size: 2rem;
-    color: #52C0FF;
+    font-weight: normal;
 }
 
 .info-text {
@@ -131,7 +132,7 @@ footer {
 }
 
 .download {
-    background-color: #C44B34;
+    background-color: #20A672;
     color: #ffffff;
     padding: .5rem;
     text-decoration: none;
@@ -181,16 +182,22 @@ footer {
     display: none;
 }
 
+.downloads {
+    width: 100%;
+}
+
+.downloads tbody tr:first-child td {
+    color: #20A672;
+    padding: .5rem 0;
+    font-weight: bold;
+}
+
 /*
  * Docs page
  */
 
 .columns {
     display: flex;
-}
-
-#content .columns div.docs {
-    margin-top: 0;
 }
 
 .item {
@@ -213,6 +220,7 @@ footer {
 
 .author {
     color: #7c7c7c;
+    font-size: .8rem;
     margin-left: .5rem;
 }
 
@@ -233,7 +241,7 @@ footer {
     text-decoration: none;
 }
 
-@media screen and (max-width: 25rem) {
+@media screen and (max-width: 40rem) {
 
     body {
         padding: 1rem;
@@ -394,18 +402,6 @@ footer {
 
 #imgdesc .description {
     padding-left: 1em;
-}
-
-table#downloads tr {
-    opacity: 0.7;
-}
-
-table#downloads thead tr {
-    opacity: 1.0;
-}
-
-table#downloads tbody tr:first-child {
-    opacity: 1.0;
 }
 
 .usergen pre {
