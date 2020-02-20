@@ -150,12 +150,12 @@ footer {
     align-self: flex-start;
 }
 
-.screens {
+.screen {
     width: 80%;
     display: inline-block;
 }
 
-.screens img {
+.screen img {
     vertical-align: middle;
 }
 
@@ -186,6 +186,11 @@ footer {
     color: #20A672;
     padding: .5rem 0;
     font-weight: bold;
+}
+
+.gpg-key {
+    white-space: pre;
+    overflow-x: scroll;
 }
 
 /*
@@ -297,10 +302,15 @@ figcaption {
     .info {
         flex-direction: column;
         margin-bottom: 1rem;
+        padding: 1rem;
     }
 
-    .info div + a {
-        margin: 1rem 0 0 0;
+    .info-text p {
+        margin: 1rem 0;
+    }
+
+    .info .screen{
+        margin-top: 1rem;
     }
 
     .screens {
