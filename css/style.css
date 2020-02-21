@@ -260,7 +260,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-left: 1rem;
+    margin-left: 2rem;
 }
 
 /* Screenshots */
@@ -271,7 +271,7 @@ footer {
 }
 
 .shot {
-    min-width: 15rem;
+    max-width: calc(55rem / 3);
     margin: 1rem;
 }
 
