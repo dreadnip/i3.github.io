@@ -39,6 +39,10 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.2;
 }
 
+h1 {
+    font-size: 3rem;
+}
+
 /*
  * Default template styling
  *  - header
@@ -54,7 +58,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 
 .logo {
@@ -95,6 +99,10 @@ main {
 
 main > * + * {
     margin-top: 1.5rem;
+}
+
+main p, main ul {
+    max-width: 40rem;
 }
 
 main ul {
@@ -144,28 +152,11 @@ footer {
  */
 
 .info {
-    padding: 2rem;
-    background-color: #242424;
-    display: flex;
-    margin-bottom: 2rem;
-}
-
-.info div + a {
-    margin-left: 1rem
-}
-
-.info h2 {
-    font-size: 2rem;
-    font-weight: normal;
-}
-
-.info-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    text-align: center;
 }
 
 .download {
+    display: inline-block;
     background-color: #2b7dbc;
     font-weight: bold;
     font-size: 1.1rem;
@@ -180,8 +171,7 @@ footer {
 }
 
 .screen {
-    width: 80%;
-    display: inline-block;
+    display: block;
 }
 
 .screen img {
