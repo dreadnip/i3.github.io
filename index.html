@@ -3,106 +3,16 @@ layout: default
 title: Your New Jekyll Site
 ---
 
-<section class="info">
+<h1>i3wm</h1>
 
-    <div class="info-text">
-        <h2>Do What I Mean. Good Docs. Clean Code. Sounds good?</h2>
-        <p>
-            Then you will love i3. Watch the <a href="screenshots/">screencast</a>,
-            read the <a href="docs/userguide.html">User’s Guide</a> and <a href="downloads/">install i3</a>!
-        </p>
-        <a class="download" href="downloads">
-            <span class="info-arrow">➡</span>
-            Download the latest version
-            <span class="version">4.19</span>
-        </a>
-    </div>
-    
-    <a class="screen" href="screenshots/" title="view more screenshots of i3">
-        <img src="screenshots/i3-9.bigthumb.png" alt="i3 screenshot"
-             srcset="screenshots/i3-12.bigthumb.jpg 2x">
-    </a>
-  
-</section>
+<p>i3 is a free and open source <a href="https://en.wikipedia.org/wiki/Tiling_window_manager">tiling window manager</a>, built from scratch in C for GNU/Linux and BSD operating systems.</p>
+<p>i3 is rock stable, highly configurable and fast. With minimal visuals and a focus on keyboard controls, it targets advanced users and developers.</p>
 
-<p>
-    i3 is a <a href="http://en.wikipedia.org/wiki/Tiling_window_manager">tiling
-    window manager</a>, completely written from scratch. The target platforms are
-    GNU/Linux and BSD operating systems, our code is Free and Open Source Software
-    (FOSS) under the BSD license. i3 is primarily targeted at advanced users and
-    developers. Based upon the experiences we made when wanting to hack/fix wmii,
-    we agreed upon the following goals for i3:
-</p>
+<a class="download" href="/downloads"><img src="img/download.svg" aria-hidden="true" /> v4.19</a>
 
-<ol>
-    <li>
-        Write well readable, well <strong>documented</strong> code. Create additional
-        documentation on how to extend i3 by explaining its internal workings.
-        <br />
-        This includes being modifiable by people who do know how to program but who are
-        not necessarily familiar with all of X11’s internals. That is, document why
-        things happen and when they happen so that the user gets a picture of the whole
-        process a Window Manager is responsible of by just reading the source code.
-    </li>
-    <li>
-        Use xcb instead of Xlib. xcb has a much cleaner API and should be faster in
-        quite a lot of situations.
-    </li>
-    <li>
-        Implement multi-monitor correctly, that is by assigning each workspace to a
-        virtual screen. Especially make sure that attaching and detaching new monitors
-        like video projectors works during operation and does the right thing. Also
-        provide support for rotated monitors.
-    </li>
-    <li>
-        Use a tree as data structure. This allows for more flexible layouts than
-        the column-based approach used by other window managers.
-    </li>
-    <li>
-        Implement different modes, like in vim. You can use different keybindings
-        when in the 'resize' mode than when you are in the default mode, for
-        example.
-    </li>
-    <li>
-        Implement an IPC interface for other programs. Provide subscription to
-        certain events and accept commands.
-        <br />
-        This approach should be more lightweight than wmii’s usage of the 9P filesystem.
-        Furthermore, core functionality does not depend on a separate program, so that i3
-        runs faster, especially when your system is under load.
-    </li>
-    <li>
-        Be UTF-8 clean.
-    </li>
-    <li>
-        The usual elitism amongst minimal window managers: Don’t be bloated, don’t be fancy
-        (simple borders are the most decoration we want to have).
-        <br />
-        However, we do not enforce unnecessary limits such as a maximum amount of source lines
-        of code. If it needs to be a bit bigger, it will be.
-    </li>
-</ol>
-
-<p>
-    In addition to these stated goals, we try our best to uphold the following
-    values when considering contributions to the project:
-</p>
-
-<ul>
-    <li>
-        Never break configuration files or existing workflows. Breaking changes
-        require a major version bump (v4 → v5).
-    </li>
-    <li>
-        Keep mental complexity low: once you know i3’s key features, other features
-        should be easy to understand.
-    </li>
-    <li>
-        Only add features which benefit many people, instead of going to great
-        lengths to support rarely used workflows.
-    </li>
-    <li>
-        Only documented behavior is supported. Clear documentation is a requirement
-        for contributions.
-    </li>
-</ul>
+<a class="screen" href="/screenshots" title="This site being built using i3wm. Click to see more screenshots of i3 in action!">
+    <figure>
+        <img src="screenshots/i3-15.bigthumb.png" alt="i3 screenshot" />
+        <figcaption>This site being built using i3wm. Click to see more screenshots of i3 in action!</figcaption>
+    </figure>
+ </a>
