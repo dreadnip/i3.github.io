@@ -1,0 +1,44 @@
+---
+layout: default
+title: About
+---
+
+<h1>About</h1>
+
+<p>The i3 project aims to deliver a robust, well-documented tiling window manager  that is 100% configurable and has a tiny footprint with lightning fast performance.</p>
+
+<p>Compared to other tiling window managers, it:</p>
+<ul>
+    <li>Uses <a href="https://xcb.freedesktop.org/">xcb</a> over xlib for improved speed</li>
+    <li>Implements multi-monitor correctly, that is by assigning each workspace to a virtual screen</li>
+    <li>Provides an IPC interface for other programs to use</li>
+    <li>Uses a tree as data structure. This allows for more flexible layouts than the column-based approach</li>
+</ul>
+<p>On top of that we really strive to:</p>
+<ul>
+	<li>
+        Write well readable, well <strong>documented</strong> code. Create additional
+        documentation on how to extend i3 by explaining its internal workings.
+        <br />
+        This includes being modifiable by people who do know how to program but who are
+        not necessarily familiar with all of X11’s internals. That is, document why
+        things happen and when they happen so that the user gets a picture of the whole
+        process a Window Manager is responsible of by just reading the source code.
+    </li>
+    <li>
+        Never break configuration files or existing workflows. Breaking changes
+        require a major version bump (v4 → v5).
+    </li>
+    <li>
+        Keep mental complexity low: once you know i3’s key features, other features
+        should be easy to understand.
+    </li>
+    <li>
+        Only add features which benefit many people, instead of going to great
+        lengths to support rarely used workflows.
+    </li>
+    <li>
+        Only documented behavior is supported. Clear documentation is a requirement
+        for contributions.
+    </li>
+</ul>
