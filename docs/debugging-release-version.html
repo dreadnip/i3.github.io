@@ -13,15 +13,19 @@ document.addEventListener("DOMContentLoaded", function(){asciidoc.footnotes();},
 /*]]>*/
 </script>
 <script type="text/javascript" src="/js/asciidoc-xhtml11.js"></script>
+<script type="text/javascript" src="/js/common.js" defer></script>
 </head>
 <body>
     <header>
         <a class="logo" href="/">
-            <img src="/img/logo.svg" alt="i3 WM logo" />
+            <img src="/img/logo_single.png" alt="i3 WM logo" />
         </a>
+        <a class="toggle" href="#" aria-expanded="false">Menu</a>
         <nav>
             <ul>
-                <li><a style="border-bottom: 2px solid #fff" href="/docs">Docs</a></li>
+                <li><a class="active" href="/docs">Docs</a></li>
+                <li><a href="/downloads">Downloads</a></li>
+                <li><a href="/about">About</a></li>
                 <li><a href="/screenshots">Screens</a></li>
                 <li><a href="https://www.reddit.com/r/i3wm/">FAQ</a></li>
                 <li><a href="/contact">Contact</a></li>
